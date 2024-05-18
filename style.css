@@ -1,0 +1,181 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-left: 20px;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+.producto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.producto img {
+    max-width: 200px;
+    margin-right: 20px;
+}
+
+.producto div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.producto h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+}
+
+.producto p {
+    margin: 5px 0;
+}
+
+.producto button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+.producto button:hover {
+    background-color: #218838;
+}
+
+/* Cart Styles */
+h2 {
+    margin-top: 20px;
+    font-size: 1.8em;
+    color: #333;
+    text-align: center;
+}
+
+#carrito {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#carrito li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#totalCompra {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px auto;
+    display: block;
+    width: auto;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Payment Method Styles */
+#metodoPago {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#metodoPago h3 {
+    margin-top: 0;
+}
+
+#metodoPago select, #metodoPago input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#metodoPago button {
+    background-color: #28a745;
+}
+
+#metodoPago button:hover {
+    background-color: #218838;
+}
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: yellow;
+    color: black;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+a.button:hover {
+    background-color: gold;
+}
+
+
+

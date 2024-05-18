@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wichoble</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header >
+        <h1>Wichoble</h1>
+        <a href="index.html" class="button">Inicio</a>
+    </header>
+    <main>
+        <div class="producto" id="producto" style="display: flex; align-items: center;">
+            <img src="img/audifonos_JBL.jpg" alt="Audifonos JBL" style="max-width: 200px; margin-right: 20px;">
+            <div>
+                <h2>JBL Tune 510BT</h2>
+                <p>JBL Tune 510BT - Auriculares in-Ear inalámbricos con Sonido Purebass, Color Negro</p>
+                <p>Precio: $599</p>
+                <button data-nombre="JBL Tune 510BT" onclick="agregarAlCarrito(599, 'JBL Tune 510BT')">Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="producto" id="producto" style="display: flex; align-items: center;">
+            <img src="img/audifonos_Sony.jpg" alt="Audifonos Sony" style="max-width: 200px; margin-right: 20px;">
+            <div>
+                <h2>Sony Audífonos inalámbricos</h2>
+                <p>Sony Audífonos inalámbricos on-Ear WH-CH520 hasta 50 Horas de duración de batería, Negro</p>
+                <p>Precio: $903</p>
+                <button data-nombre="Sony Audífonos inalámbricos" onclick="agregarAlCarrito(903, 'Sony Audífonos inalámbricos')">Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="producto" id="producto" style="display: flex; align-items: center;">
+            <img src="img/airpods.jpg" alt="Apple AirPods Pro" style="max-width: 200px; margin-right: 20px;">
+            <div>
+                <h2>Apple AirPods Pro</h2>
+                <p>Apple AirPods Pro (2a generación) con Estuche MagSafe (USB-C)</p>
+                <p>Precio: $3,151</p>
+                <button data-nombre="Apple AirPods Pro" onclick="agregarAlCarrito(3151, 'Apple AirPods Pro')">Agregar al Carrito</button>
+            </div>
+        </div>
+    </main>
+
+    <h2>Carrito de Compras</h2>
+    <ul id="carrito">
+    </ul>
+    <div id="totalCompra">Total: $0</div>
+
+    <button onclick="comprar()">Comprar</button>
+
+    <div id="metodoPago" style="display: none;">
+        <h3>Selecciona un método de pago:</h3>
+        <select id="metodoPagoSelect" onchange="mostrarFormulario()">
+            <option value="tarjeta">Tarjeta de crédito</option>
+            <option value="paypal">PayPal</option>
+        </select>
+        <div id="formularioTarjeta" style="display: none;">
+            <h3>Información de la tarjeta de crédito:</h3>
+            <input type="text" id="nombreTarjeta" placeholder="Nombre en la tarjeta">
+            <input type="text" id="numeroTarjeta" placeholder="Número de tarjeta">
+            <input type="text" id="fechaExpiracion" placeholder="Fecha de expiración">
+            <button onclick="confirmarCompra()">Confirmar compra</button>
+        </div>
+        <div id="formularioPaypal" style="display: none;">
+            <h3>Inicio de sesión en PayPal:</h3>
+            <input type="email" id="correoPaypal" placeholder="Correo electrónico de PayPal">
+            <input type="password" id="contrasenaPaypal" placeholder="Contraseña de PayPal">
+            <button onclick="confirmarCompraPaypal()">Confirmar compra con PayPal</button>
+        </div>
+    </div>
+
+    <script src="roberto.js"></script>
+</body>
+</html>

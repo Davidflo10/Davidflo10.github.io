@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wichoble</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Wichoble</h1>
+        <a href="index.html" class="button">Inicio</a>
+    </header>
+    <main>
+        <div class="producto" id="producto" style="display: flex; align-items: center;">
+            <img src="img/61INtCQzv2L._AC_SX679_.jpg" alt="PC GAMER" style="max-width: 200px; margin-right: 20px;">
+            <div>
+                <h2>PC GAMER</h2>
+                <p>Skytech Nebula Gaming PC Desktop – Intel Core i5 13400F 2.5 GHz, NVIDIA RTX 4060, 1TB NVME SSD, 16GB DDR4 RAM 3200, 600W Gold PSU, 11AC Wi-Fi, Windows 11 Home 64 bits</p>
+                <p>Precio: $17,797</p>
+                <button onclick="agregarAlCarrito(17797, 'PC GAMER')">Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="producto" id="producto" style="display: flex; align-items: center;">
+            <img src="img/61jqU75-xYL._AC_SX450_.jpg" alt="PC DE ESCRITORIO (Reacondicionado)" style="max-width: 200px; margin-right: 20px;">
+            <div>
+                <h2>PC DE ESCRITORIO (Reacondicionado)</h2>
+                <p>Dell OptiPlex 7050 Factor de Forma pequeño, Intel Quad Core i5-6500 hasta 3.6GHz, 16G DDR4, 256G SSD, WIFI, DP, HDMI, 4K Support, Windows 10 Pro 64-Multi-Language Support Inglés/Español/Francés</p>
+                <p>Precio: $3,092</p>
+                <button onclick="agregarAlCarrito(3092, 'PC DE ESCRITORIO (Reacondicionado)')">Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="producto" id="producto" style="display: flex; align-items: center;">
+            <img src="img/81ldT1ChZJL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="PC HP" style="max-width: 200px; margin-right: 20px;">
+            <div>
+                <h2>PC HP</h2>
+                <p>HP All-in-One 22-dd2032la, Desktop, PC, Windows 11 Home, Intel® Celeron®, 4GB RAM, 256GB SSD, FHD 21.5", Garantía México, Blanco</p>
+                <p>Precio: $8,899</p>
+                <button onclick="agregarAlCarrito(8899, 'PC HP')">Agregar al Carrito</button>
+            </div>
+        </div>
+    </main>
+
+    <h2>Carrito de Compras</h2>
+    <ul id="carrito">
+        <!-- Aquí se mostrarán los productos agregados al carrito -->
+    </ul>
+    <div id="totalCompra">Total: $0</div>
+
+    <button onclick="comprar()">Comprar</button>
+
+    <div id="metodoPago" style="display: none;">
+        <h3>Selecciona un método de pago:</h3>
+        <select id="metodoPagoSelect" onchange="mostrarFormulario()">
+            <option value="tarjeta">Tarjeta de crédito</option>
+            <option value="paypal">PayPal</option>
+        </select>
+        <div id="formularioTarjeta" style="display: none;">
+            <h3>Información de la tarjeta de crédito:</h3>
+            <input type="text" id="nombreTarjeta" placeholder="Nombre en la tarjeta">
+            <input type="text" id="numeroTarjeta" placeholder="Número de tarjeta">
+            <input type="text" id="fechaExpiracion" placeholder="Fecha de expiración">
+            <button onclick="confirmarCompra()">Confirmar compra</button>
+        </div>
+        <div id="formularioPaypal" style="display: none;">
+            <h3>Inicio de sesión en PayPal:</h3>
+            <input type="email" id="correoPaypal" placeholder="Correo electrónico de PayPal">
+            <input type="password" id="contrasenaPaypal" placeholder="Contraseña de PayPal">
+            <button onclick="confirmarCompraPaypal()">Confirmar compra con PayPal</button>
+        </div>
+    </div>
+    <script src="roberto.js"></script>
+</body>
+</html>

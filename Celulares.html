@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wichoble</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Wichoble</h1>
+        <a href="index.html" class="button">Inicio</a>
+    </header>
+    <main>
+        <div class="producto" id="producto" style="display: flex; align-items: center;">
+            <img src="img/41+jLq6yJKL._AC_SX466_.jpg" alt="Apple iPhone 15" style="max-width: 200px; margin-right: 20px;">
+            <div>
+                <h2>Apple iPhone 15</h2>
+                <p>Apple iPhone 15 (256 GB) - Azul</p>
+                <p>Precio: $21,399</p>
+                <button onclick="agregarAlCarrito(21399, 'Apple iPhone 15')">Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="producto" id="producto" style="display: flex; align-items: center;">
+            <img src="img/61hHGEHbozL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="SAMSUNG Celular Galaxy A05" style="max-width: 200px; margin-right: 20px;">
+            <div>
+                <h2>SAMSUNG Celular Galaxy A05</h2>
+                <p>SAMSUNG Celular Galaxy A05 Plata 4GB RAM 64GB, Nacional con Garantía</p>
+                <p>Precio: $1,849</p>
+                <button onclick="agregarAlCarrito(1849, 'SAMSUNG Celular Galaxy A05')">Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="producto" id="producto" style="display: flex; align-items: center;">
+            <img src="img/41Whma-6NEL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Honor Magic5 Lite 5G Smartphone" style="max-width: 200px; margin-right: 20px;">
+            <div>
+                <h2>Honor Magic5 Lite 5G Smartphone</h2>
+                <p>Honor Magic5 Lite 5G Smartphone 8GB 256GB, Pantalla Curva AMOLED de 6,67" 120Hz, Triple cámara Trasera de 64MP, Batería de 5100 mAh, 40W Supercharge, Android 12, Escarcha Mística</p>
+                <p>Precio: $4,398</p>
+                <button onclick="agregarAlCarrito(4398, 'Honor Magic5 Lite 5G Smartphone')">Agregar al Carrito</button>
+            </div>
+        </div>
+    </main>
+
+    <h2>Carrito de Compras</h2>
+    <ul id="carrito">
+    </ul>
+    <div id="totalCompra">Total: $0</div>
+
+    <button onclick="comprar()">Comprar</button>
+
+    <div id="metodoPago" style="display: none;">
+        <h3>Selecciona un método de pago:</h3>
+        <select id="metodoPagoSelect" onchange="mostrarFormulario()">
+            <option value="tarjeta">Tarjeta de crédito</option>
+            <option value="paypal">PayPal</option>
+        </select>
+        <div id="formularioTarjeta" style="display: none;">
+            <h3>Información de la tarjeta de crédito:</h3>
+            <input type="text" id="nombreTarjeta" placeholder="Nombre en la tarjeta">
+            <input type="text" id="numeroTarjeta" placeholder="Número de tarjeta">
+            <input type="text" id="fechaExpiracion" placeholder="Fecha de expiración">
+            <button onclick="confirmarCompra()">Confirmar compra</button>
+        </div>
+        <div id="formularioPaypal" style="display: none;">
+            <h3>Inicio de sesión en PayPal:</h3>
+            <input type="email" id="correoPaypal" placeholder="Correo electrónico de PayPal">
+            <input type="password" id="contrasenaPaypal" placeholder="Contraseña de PayPal">
+            <button onclick="confirmarCompraPaypal()">Confirmar compra con PayPal</button>
+        </div>
+    </div>
+
+    <script src="roberto.js"></script>
+</body>
+</html>
